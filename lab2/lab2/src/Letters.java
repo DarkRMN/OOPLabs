@@ -1,29 +1,27 @@
-import java.util.Arrays;
 import java.util.Scanner;
 
 public class Letters {
 
-    private  String letters;
+    private String initialText;
+    private String editedText;
 
-    private StringBuilder afterEditing = new StringBuilder();
-
-    public void enterText(){
+    public void enterText() {
         Scanner scanner = new Scanner(System.in);
         System.out.println("Ведіть текст: ");
-        letters = scanner.nextLine();
+        initialText = scanner.nextLine();
     }
 
     public void textEditing() {
-        StringBuilder text = new StringBuilder(letters);
-        String[] textEdit = text.toString().split(" ");
+        String[] textEdit = initialText.split(" ");
 
         for (int i = 0; i < textEdit.length; i++) {
-            textEdit[i] = textEdit[i].replaceAll("[[\\p{Punct}\\p{So}\\p{Sc}0-9]]", "");
+            textEdit[i] = textEdit[i].replaceAll("[\\p{Punct}\\p{So}\\p{Sc}0-9]", "");
         }
-        System.out.println("Text after editing: " + Arrays.toString(textEdit));
+        editedText = String.join(" ", textEdit);
     }
 
-    public void textOut(){
-        System.out.println("Text before editing: " + letters);
+    public void textOut() {
+        System.out.println("Text before editing: " + initialText);
+        System.out.println("Text after editing: " + editedText);
     }
 }
