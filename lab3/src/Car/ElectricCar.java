@@ -33,7 +33,7 @@ public class ElectricCar extends Car{
                 ", year=" + year +
                 ", price=" + price +
                 ", regNumber='" + regNumber + '\'' +
-                "batteryCapacity=" + batteryCapacity +
+                ", batteryCapacity=" + batteryCapacity +
                 ", mileage=" + mileage +
                 '}';
     }

@@ -33,7 +33,7 @@ public class SportsCar extends Car{
                 ", year=" + year +
                 ", price=" + price +
                 ", regNumber='" + regNumber + '\'' +
-                "topSpeed=" + topSpeed +
+                ", topSpeed=" + topSpeed +
                 ", amountOfDoors=" + amountOfDoors +
                 '}';
 
